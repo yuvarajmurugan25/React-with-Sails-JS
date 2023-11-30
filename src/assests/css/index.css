@@ -17,6 +17,10 @@ body{
 }
 .app{/* for loading component uses app class name*/
     height: var(--h);
+    display: grid;
+    justify-content: center;
+    grid-template-columns: .5fr;
+    padding: .7rem;
 }
 
 .app-load{/* for loading component */

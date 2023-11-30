@@ -1,0 +1,41 @@
+*,::before, ::after{
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+}
+:root{
+    --h:100vh;/* if svh supported it wil over ride this */
+    --h-sc: calc(var(--h) - #{$nav_fixed_height});
+    --h-sc-i: calc(var(--h-sc) - #{$topnav_fixed_height});
+}
+body{
+    margin: 0;
+}
+@supports (height: 100svh){
+    :root{
+        --h:100svh;/* dvh=> svh beacause while scroll dvh adjust the height that is quite annoying so svh always excluded the browser content*/
+    }
+}
+.app{/* for loading component uses app class name*/
+    height: var(--h);
+}
+
+.app-load{/* for loading component */
+    display: grid;
+    place-content: center;
+    & .spin{
+        width: 3rem;
+        aspect-ratio: 1;
+        border-top: 2px solid black;
+        border-radius: 50%;
+        animation: spin .8s linear 0s infinite;
+    }
+}
+
+@keyframes spin {
+    from {
+      transform: rotate(0);
+    }
+    to{
+      transform: rotate(359deg);
+    }
+}

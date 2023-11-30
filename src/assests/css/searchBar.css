@@ -1,0 +1,73 @@
+.srh {
+    display: flex;
+    align-items: center;
+    color: #3a3a3a;
+  }
+  .srh > input:checked ~ :is(span,ul) {
+    display: inline;
+  }
+  .srh > input:checked + label {
+    display: none;
+  }
+  .srh-r {
+    position: fixed;
+    top: 45px;
+    left: 0;
+    width: 100%;
+    height: calc(100% - 55px);
+    background-color: rgba(0, 0, 0, 0.3);
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    display: none;
+  }
+  .srh-r li {
+    padding: 5px 10px;
+    background-color: #ebf7eb;
+    font-size: 14px;
+    border-bottom: 1px solid lightgray;
+    text-align: left;
+  }
+  .srh-r li em {
+    color: #1f623a;
+    font-weight: 500;
+    font-style: normal;
+  }
+  .srh-r li em:is(.no) {
+    text-align: center;
+  }
+  .srh-r li a {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+  }
+  .srh-so {
+    flex: 1 1 auto;
+    border: 1px solid #ced4da;
+    border-radius: 30px;
+    padding: 3px 10px;
+    transition: all 0.5s ease-in-out;
+    display: none;
+  }
+  .srh-so form {
+    width: 100%;
+    height: 100%;
+    display: flex;
+  }
+  .srh-so form > svg {
+    margin-right: 5px;
+    flex-shrink: 0;
+  }
+  .srh-so form input {
+    width: inherit;
+    height: inherit;
+    outline: 0;
+    border: none;
+    background-color: inherit;
+  }
+  .srh-so form button {
+    border: none;
+    appearance: none;
+    background: none;
+    padding: 0;
+  }
